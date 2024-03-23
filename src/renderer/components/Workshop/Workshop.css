@@ -1,0 +1,186 @@
+@keyframes spinner___ {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.spinner-epta {
+  width: 30px;
+}
+input[type=checkbox]:checked ~ .spinner-epta {
+  animation: spinner___ 0.8s infinite linear;
+}
+.edit-button-menu1 {
+  position: absolute;
+  top: 170px;
+  left: 485px;
+  z-index: 2;
+  background: #424242;
+  border-radius: 5px;
+  animation: animat 0.3s ease;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+.edit-button-menu1 > :first-child:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+.edit-button-menu1 > :first-child:hover > * {
+  color: #018134;
+  cursor: pointer;
+}
+.edit-button-menu1 > :last-child:hover {
+  background-color: aliceblue;
+  cursor: pointer;
+}
+.edit-button-menu1 > :last-child:hover > * {
+  color: red;
+  cursor: pointer;
+}
+.workshop-image-holder {
+  overflow: clip;
+}
+.workshop-description {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
+  width: 80%;
+  border-radius: 5px;
+  background: #323232;
+  padding: 20px;
+}
+.workshop-asset-menu-shadow {
+  -webkit-box-shadow: -50px 0px 79px 47px rgba(0, 0, 0, 0.71);
+  -moz-box-shadow: -50px 0px 79px 47px rgba(0, 0, 0, 0.71);
+  box-shadow: -50px 0px 79px 47px rgba(0, 0, 0, 0.71);
+}
+.workshop-asset-menu-arrow-left {
+  width: 20px;
+  height: 20px;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(38deg) brightness(112%) contrast(107%);
+  cursor: pointer;
+}
+.workshop-asset-menu-arrow-right {
+  width: 20px;
+  height: 20px;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(38deg) brightness(112%) contrast(107%);
+  transform: rotate(180deg);
+  cursor: pointer;
+}
+.workshop-asset-menu-selected-page {
+  font-weight: bold;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: -2px;
+  color: #02CA52;
+}
+.workshop-edit-button {
+  background: purple;
+  width: 40px;
+  margin-left: 5px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  cursor: pointer;
+}
+.workshop-edit-button:hover {
+  background: #C400C4;
+}
+.workshop-editor-delete-file {
+  display: flex;
+}
+.workshop-editor-delete-file > :nth-last-child(1) {
+  opacity: 0;
+}
+.workshop-editor-delete-file:hover > :nth-last-child(1) {
+  opacity: 1;
+  filter: invert(20%) sepia(96%) saturate(6473%) hue-rotate(4deg) brightness(106%) contrast(126%) !important;
+  transition: 0.2s;
+}
+.workshop-editor-upload-image {
+  width: 100px;
+  height: 100px;
+  background: #323232;
+  cursor: pointer;
+  display: flex;
+}
+.workshop-editor-upload-image:hover {
+  background: #358d4b;
+  transition: 0.2s;
+}
+.workshop-editor-upload-image:hover > * {
+  transition: 0.2s;
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(252deg) brightness(102%) contrast(101%);
+}
+.workshop-asset-menu-number-pages {
+  font-weight: bold;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: -2px;
+  cursor: pointer;
+}
+.ant-drawer-content-wrapper {
+  top: 50px !important;
+}
+.ant-drawer {
+  position: fixed;
+}
+.workshop-assets-menu {
+  height: 508px;
+  display: flex;
+  width: 450px;
+  background: #404040;
+  padding: 20px;
+  border: 1px solid #5a5a5a;
+}
+.workshop-install-button {
+  width: 45px !important;
+  height: 45px !important;
+  display: flex !important;
+  border-radius: 50% !important;
+}
+.workshop-black-screen-nigger {
+  position: absolute;
+  width: calc(100vw - 50px);
+  left: calc(-100vw + 100px);
+  height: 100vh;
+  background: black;
+  opacity: 0.7;
+  z-index: 2;
+}
+.workshop-install-button > * {
+  margin: auto;
+  width: 29px;
+  height: 29px;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(38deg) brightness(112%) contrast(107%);
+}
+.workshop-arrow-button-right {
+  width: 35px !important;
+  height: 35px !important;
+  display: flex !important;
+  border-radius: 50% !important;
+  margin-left: 10px;
+}
+.workshop-arrow-button-right > * {
+  width: 22px;
+  height: 22px;
+  margin: auto;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(38deg) brightness(112%) contrast(107%);
+  transform: rotate(180deg);
+}
+.workshop-arrow-button-left {
+  width: 35px !important;
+  height: 35px !important;
+  display: flex !important;
+  border-radius: 50% !important;
+  margin-right: 10px;
+}
+.workshop-arrow-button-left > * {
+  width: 22px;
+  height: 22px;
+  margin: auto;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(38deg) brightness(112%) contrast(107%);
+}

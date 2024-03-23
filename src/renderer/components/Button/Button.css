@@ -1,0 +1,72 @@
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 90% 50%;
+  }
+}
+.buttonOuter {
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  width: fit-content;
+}
+.buttonOuter.green {
+  background: linear-gradient(-45deg, #73c795, #02c34e, #00a341, #018134);
+  background-size: 400% 400%;
+}
+.buttonOuter.purple {
+  background: linear-gradient(325deg, #ffa8ff, #cb7ccb, #b500b5, #800080);
+  background-size: 400% 400%;
+}
+.buttonOuter > * {
+  cursor: pointer;
+}
+.buttonOuter:hover {
+  animation: gradient 0.5s ease;
+  background-position: 90% 50%;
+}
+.buttonOuter:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) inset;
+}
+.buttonOuter.submit {
+  cursor: not-allowed;
+  background-position: 0% 0%;
+  filter: brightness(0.8);
+}
+.buttonOuter.submit:hover {
+  animation: none;
+}
+.buttonOuter.submit > * {
+  cursor: not-allowed;
+}
+.buttonOuter.submit > .button {
+  padding-right: 10px !important;
+}
+.buttonOuter.submit > .____loader_____ {
+  width: 25px;
+  display: flex;
+  align-items: center;
+}
+.buttonOuter.submit > .____loader_____ > * {
+  opacity: 1;
+}
+.____loader_____ {
+  transition: all 0.2s ease-in-out;
+  width: 0px;
+}
+.____loader_____ > * {
+  opacity: 0;
+}
+.button {
+  margin: auto;
+  background: transparent;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-width: 0;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}

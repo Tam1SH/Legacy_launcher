@@ -1,0 +1,87 @@
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 90% 50%;
+	}
+}
+
+.buttonOuter {
+	cursor: pointer;
+	border-radius : 20px;
+	transition: all 0.2s ease-in-out;
+	&.green {
+		background: linear-gradient(-45deg, #73c795, #02c34e, #00a341, #018134);
+		background-size: 400% 400%;
+	}
+	&.purple {
+		background: linear-gradient(325deg, rgba(255,168,255,1), rgba(203,124,203,1), rgba(181,0,181,1), rgba(128,0,128,1));
+		background-size: 400% 400%;
+	}
+
+	
+	display: flex;
+	width: fit-content;
+	>* {
+		cursor: pointer;
+	}
+
+	&:hover {
+		animation: gradient 0.5s ease;
+		background-position: 90% 50%;
+	}
+
+	&:active {
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) inset;
+	}
+
+	&.submit {
+		&:hover {
+			animation: none;
+
+		}
+		cursor: not-allowed;
+
+		>* {
+			cursor: not-allowed;
+		}
+
+		background-position: 0% 0%;
+		filter: brightness(0.8);
+		> .button {
+			padding-right: 10px !important;
+		}
+
+		> .____loader_____ { 
+			width: 25px;	
+			display: flex;
+			align-items: center;
+			>* {
+				opacity: 1;
+			}
+		}
+	}
+
+}
+
+.____loader_____ {
+	transition: all 0.2s ease-in-out;
+	>* {
+		opacity: 0;
+	}
+	width: 0px;
+}
+
+.button {
+	margin: auto;
+	background: transparent;
+	border-radius : 20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	border-width: 0;
+	color : white;
+	transition: all 0.2s ease-in-out;
+}
+

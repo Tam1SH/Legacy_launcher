@@ -1,0 +1,505 @@
+
+
+
+:root {
+	--scrollbar-minlength: 1.5rem; /* Minimum length of scrollbar thumb (width of horizontal, height of vertical) */
+	--scrollbar-ff-width: thin; /* FF-only accepts auto, thin, none */
+	--scrollbar-track-color: transparent;
+	--scrollbar-color-active: var(--main-color);
+}
+p {
+	color : white;
+}
+
+@font-face {
+	font-family: 'SUS2';
+	src: url('./fonts/Montserrat-Regular.ttf');
+}
+
+ul, li, span, div {
+	margin: 0;
+	font-family: SUS2;
+	color : white;
+}
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: SUS2;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+img {
+	width : 100%;
+	height : 100%;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	 -khtml-user-select: none; /* Konqueror HTML */
+	   -moz-user-select: none; /* Old versions of Firefox */
+		-ms-user-select: none; /* Internet Explorer/Edge */
+			user-select: none; /* Non-prefixed version, currently
+								  supported by Chrome, Edge, Opera and Firefox */
+}
+
+label {
+	color : white;
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	 -khtml-user-select: none; /* Konqueror HTML */
+	   -moz-user-select: none; /* Old versions of Firefox */
+		-ms-user-select: none; /* Internet Explorer/Edge */
+			user-select: none; /* Non-prefixed version, currently
+								  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.toggle-bg {
+	
+	background: #222; /* Вам понадобится видеть область с тумблером, но не стесняйтесь изменить цвет */
+	display: block; /* ...Чтобы можно было установить высоту и ширину */
+	float: left; /* ...Чтобы он не занимал всю ширину страницы */
+	height: 7px; /* Если хотите, можно это попозже изменить */
+	position: relative; /* Требуется, чтобы тумблер мог передвигаться */
+	width: 40px; /* Это тоже можно позже изменить */
+	border-radius: 8px;
+}
+
+.toggle-bg input{
+	
+	height: 28px;
+	left: 0;
+	margin: 0; /* Сбросьте поля и отступ */
+	opacity: 0; /* Невидим! */
+	padding: 0;
+	position: absolute;
+	top: -10px; /* Сдвиньте по вертикали */
+	width: 36px;
+	z-index: 2; /* Нам нужно, чтобы вход input находился сверху span.switch, которому мы назначим z-index в 1 */
+}
+	
+.toggle-bg input:checked~.switch{ left: -1px;  } /* Исходная позиция тумблера */
+
+.toggle-bg input~:checked~.switch{ left: 25px; background: #018134; } /*окончательная относительная позиция переключателя */
+
+.toggle-bg input:checked{ z-index: 0; }
+
+
+.updater {
+	-webkit-app-region: drag;
+}
+
+.update {
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+	0% {
+		opacity: 0.2;
+		transform: scale(2);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(2.3);
+	}
+	100% {
+		opacity: 0.2;
+		transform: scale(2);
+	}
+}
+
+
+.assetText {
+	width : 80%;
+	margin-top : 5px;
+	white-space: nowrap;
+	font-size : 14px;
+	margin-left : auto;
+	margin-right : auto;
+	overflow : hidden;
+	text-overflow : ellipsis;
+	font-weight : bold;
+	cursor : pointer
+}
+
+
+.asset { 
+	margin : auto;
+	width : 80%;
+	height : calc(80px + 5vw);
+	overflow : hidden;
+	border-radius : 5px;
+	background : #018134;
+	cursor : pointer;
+
+	-webkit-box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.18);
+	-moz-box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.18);
+	box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.18);
+}
+
+.workshop-asset-preview {
+	display : flex;
+	flex-direction : column;
+	margin-bottom : 20px;
+}
+
+.workshop-asset-preview:hover  {
+	transform: scale(1.1);
+}
+
+.uploadContext1 {
+	
+	width :  400px;
+	height  : 260px;
+}
+.uploadContext { 
+
+	background : black;
+	width  : 100%;
+	height : 100%;
+	display : flex;
+	opacity: 0;
+}
+
+.errorInfoParent {
+	
+	width : 20px;
+	margin-top : 7px;
+	margin-left : 10px;
+	height : 20px;
+}
+
+
+
+
+.errorInfoParent:hover > .errorInfo:not(:hover)  {
+	opacity: 1;
+}
+
+@keyframes changeColor {
+	0% {
+		background : #323232;
+	}
+
+	100% {
+		background: #044013;
+	}
+}
+
+#CurrentForumIssue * {
+	pointer-events: none
+}
+.forumElement {
+	width : 95%;
+	max-width : 900px;
+	background : #323232;
+	
+
+	margin-bottom : 30px;
+	border-radius : 10px;
+	margin-left : auto;
+	margin-right : auto;
+	display : 'flex',
+}
+.forumElement:hover {
+	cursor: pointer;
+	animation: changeColor 0.1s normal;
+	background: #044013;
+}
+.select {
+
+	height : 30px;
+
+	background : #454545;
+	color : white;
+	cursor : pointer;
+	width : 90px;
+	border-radius : 5px;
+	border : none;
+}
+.select * {
+	border-radius: -5px;
+	top: 10px;
+}
+
+.errorInfo {
+	width: max-content;
+	opacity: 0;
+	position: relative;
+	background-color: #018134;
+}
+.upload { 
+	width: 50px;
+	height: 50px;
+	margin: auto;
+	opacity: 0;
+}
+
+.uploadContext:hover {
+	opacity: 0.7;
+}
+
+
+
+
+
+
+.asset:hover {
+	-webkit-box-shadow: 0px 1px 14px 0px rgba(1, 129, 52, 0.38);
+	-moz-box-shadow: 0px 1px 14px 0px rgba(1, 129, 52, 0.38);
+	box-shadow: 0px 1px 14px 0px rgba(1, 129, 52, 0.38);
+}
+
+
+
+
+:root {
+	--scrollbar-size: .65rem;
+	
+	--scrollbar-minlength: 1.5rem; /* Minimum length of scrollbar thumb (width of horizontal, height of vertical) */
+	--scrollbar-ff-width: thin; /* FF-only accepts auto, thin, none */
+	--scrollbar-track-color: transparent;
+	--scrollbar-color: #cecece;
+	--scrollbar-color-hover: #858585;
+	--scrollbar-color-active: white;
+	left : -50px;
+}
+
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently
+									supported by Chrome, Edge, Opera and Firefox */
+}
+
+
+.layout-cell {
+overscroll-behavior: contain;
+overflow-y: auto;
+-webkit-overflow-scrolling: touch;
+-ms-overflow-style: -ms-autohiding-scrollbar;
+scrollbar-width: var(--scrollbar-ff-width);
+}
+
+/* This class controls what elements have the new fancy scrollbar CSS */
+.layout-scrollbar {
+scrollbar-color: var(--scrollbar-color) var(--scrollbar-track-color);
+}
+
+.layout-scrollbar::-webkit-scrollbar {
+height: var(--scrollbar-size);
+background-clip: content-box;
+}
+
+.layout-scrollbar::-webkit-scrollbar-track {
+background-color: var(--scrollbar-track-color);
+}
+
+.layout-scrollbar::-webkit-scrollbar-thumb {
+	
+	background-color: var(--scrollbar-color);
+	border-radius: 30px;
+	border: solid 10px transparent;
+	background-clip: content-box;
+    border: 6px solid transparent;
+}
+.layout-scrollbar::-webkit-scrollbar-thumb:hover {
+background-color: var(--scrollbar-color-hover);
+}
+.layout-scrollbar::-webkit-scrollbar-thumb:active {
+background-color: var(--scrollbar-color-active);
+}
+.layout-scrollbar::-webkit-scrollbar-thumb:vertical {
+min-height: var(--scrollbar-minlength);
+}
+.layout-scrollbar::-webkit-scrollbar-thumb:horizontal {
+min-width: var(--scrollbar-minlength);
+}
+
+@keyframes color-change {
+	0% { background: red; }
+	50% { background: blue; }
+	100% { background: red; }
+}
+
+
+
+
+
+.switch {
+	
+	border-radius: 50%;
+	background: #ccc;
+	display: block;
+	transition: left .3s cubic-bezier(0.65, 0, 0.35, 1);
+	float: left;
+	height: 16px;
+	left: -1px; /* Это – начальная точка. При добавлении border radius немного виден фон, если использовать left: 0;, поэтому лучше всего применить -1px.*/
+	position: relative;
+	top: -4px; /* ...Чтобы отцентрировать его по вертикали */
+	width: 16px;
+	z-index: 1; /* Помните, он должен быть под невидимыми input-ами */
+}
+
+.dynamic-image {
+	width : calc(29px + (41 - 29) * ((100vw - 600px) / (1920 - 600)));
+	height: calc(29px + (41 - 29) * ((100vh - 600px) / (1080 - 600)));
+}
+
+.dynamic {
+	width : calc(45px + (100 - 45) * ((100vw - 600px) / (1920 - 600)));
+	height: calc(45px + (100 - 45) * ((100vw - 600px) / (15360 - 600)));
+}
+
+
+.inject-button {
+	width : 120px;
+	height : 40px;
+	font-size : 20px;
+	font-weight : bold;
+	letter-spacing : 3px;
+	cursor : pointer;
+	background : #018134;
+	border-radius : 5px;
+	border-width: 0;
+	color : white;
+	
+    transition-duration: 0.2s;
+	-webkit-box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.18);
+	-moz-box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.18);
+	box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.18);
+}
+
+
+.inject-button:hover {
+	background : #02ce54;
+}
+
+.inject-button:active {
+	margin-left: 1px;
+	margin-top: 1px;
+	background: green;
+	
+}
+
+
+.znakVoprosa {
+	display: inline-block;
+	position: relative;
+	width : 20px;
+	height : 20px;
+	margin-left : 10px;
+	margin-top : 5px;
+	background : darkgreen;
+	border-radius : 50%;
+}
+
+.znakVoprosa:hover::after {
+	word-wrap: break-word;
+	content: attr(data-title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: -450%; top: -200%; /* Положение подсказки */
+    z-index: 10; /* Отображаем подсказку поверх других элементов */
+    background-color: palevioletred;
+    padding: 7px ; /* Поля */
+	font-size: 13px;
+	color : white;
+	width: max-content;
+	max-width: 300px;
+	border-radius: 5px;
+	transition-duration: 0.2s;
+	-webkit-box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.18);
+	-moz-box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.18);
+	box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.18);
+}
+/*
+.znakVoprosa:hover::after {
+	background-color: #02ce54;
+	width: 10px;
+	height: 10px;
+	margin-left: 100px;
+	position: absolute;
+	z-index: 10;
+}
+*/
+
+.container-row {
+	display: flex;
+	flex-direction: row;
+}
+.shadow {
+	-webkit-box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.18);
+	-moz-box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.18);
+	box-shadow: 0px 10px 11px 0px rgba(0, 0, 0, 0.18);
+}
+
+
+
+.menu {
+}
+
+.link-custom {
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	color :#868686;
+}
+
+.link-custom:link {color:#868686; text-decoration:none;}
+.link-custom:hover {color:#868686; text-decoration:underline;}
+.link-custom:visited {color:#868686; text-decoration:none;}
+
+.mininize {
+	filter: invert(100%) sepia(92%) saturate(3%) hue-rotate(198deg) brightness(107%) contrast(100%);
+	-webkit-app-region: none;
+
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+
+}
+.mininize:hover {
+	filter: invert(54%) sepia(44%) saturate(1639%) hue-rotate(168deg) brightness(98%) contrast(94%);
+}
+.close { 
+	-webkit-app-region: none;
+
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	width: 15px;
+	height: 15px;
+	filter: invert(99%) sepia(92%) saturate(3%) hue-rotate(198deg) brightness(107%) contrast(100%);
+}
+.close:hover {
+	filter: invert(19%) sepia(88%) saturate(7455%) hue-rotate(359deg) brightness(101%) contrast(107%);
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,257 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.label {
+	color : white;
+}
+
+.img {
+	width : 100%;
+	height : 100%;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+	display: inline;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+
+@font-face {
+	font-family: 'SUS';
+	src: url('./fonts/pizdat_font.otf');
+}
+#root {
+    width: 100%;
+    height: 100%;
+	background-color: #191919;
+}
+
+.Head { 
+	position: fixed;
+	color: #FFFFFF;
+	width: 100%;
+	height: 50px;
+	-webkit-app-region: drag;
+	z-index: 1;
+}
+
+code {
+  color: #E01A76;
+}
+
+
+
+
+.login-menu-field-input {
+	margin-left : 20px;
+	width : 80%;
+	height : 30px;
+	background : #636363;
+	margin-top : 15px;
+	border-radius : 5px;
+	border-color : #AFC;
+	color : white;
+	border: 1px solid #636363;
+	
+}
+
+.SpecLabel {
+	margin-bottom : 0px;
+	font-size : 17px;
+	margin-right : 20px;
+	font-weight : normal;
+}
+
+.SpecLabel:hover {
+	font-weight : bold;
+}
+
+.login-menu-button {
+	width : 80px;
+	height : 30px;
+	background : #018134;
+	margin-left : 20px;
+	margin-top : 5px;
+	margin-bottom : 10px;
+	border-radius : 5px;
+	border-width: 0;
+	color : white;
+	-webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.login-menu-button:hover {
+	background : #02ce54;
+}
+
+.login-menu-button:active {
+	margin-left : 21px;
+	margin-top : 6px;
+	background: green;
+}
+
+.login-menu-field-input::placeholder {
+	color: #e0e0e0;
+  	opacity: 0.4;
+
+	padding-left: 5px;
+}
+
+.login-menu-field-input:focus {
+	color : whitesmoke;
+	border-color: rgb(182, 182, 182);
+	border-width: 2px;
+	outline: 0;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.ProfileIcon {
+	display:  block;
+	width : 40px;
+	height : 40px;
+	margin-top : 5px;
+	margin-right : 0px;
+	overflow : hidden;
+	border-radius : 50%;
+
+}
+
+.label_head_below { 
+	-webkit-box-shadow: 0px 2px 15px 0px rgba(0, 210, 15, 0.48);
+	-moz-box-shadow: 0px 2px 15px 0px rgba(0, 210, 15, 0.48);
+	box-shadow: 0px 2px 15px 0px rgba(0, 210, 15, 0.48);
+}
+
+.ListGamesHeader { 
+	width : 100%;
+	height : 50px;
+	justify-content: center;
+	top : 6px;
+	align-items: center;
+	display : flex;
+	-webkit-box-shadow: 0px 3px 23px -1px rgba(37, 37, 37, 1);
+	-moz-box-shadow: 0px 3px 23px -1px rgba(37, 37, 37, 1);
+	box-shadow: 0px 3px 23px -1px rgba(37, 37, 37, 1);
+	background-color: #333333;
+	
+}
+
+.Description {
+	background: rgba(156, 156, 156, 0.192);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(43, 43, 43, 0.568);
+	-webkit-box-shadow: 4px 4px 100px 67px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 4px 4px 100px 67px rgba(0, 0, 0, 0.2);
+	box-shadow: 4px 4px 100px 67px rgba(0, 0, 0, 0.2);
+}
+.PictureOfGame { 
+	background-size: cover;
+	background-blend-mode: overlay, color;
+	background-image: 
+	linear-gradient(90deg, #f8a261, #6e9fc9), 
+	url('./Entity/sasavnPresent.jpg');
+
+	-webkit-box-shadow: 0px -3px 100px 70px #1F1F1F inset;
+	-moz-box-shadow: 0px -3px 100px 70px #1F1F1F inset;
+	box-shadow: 0px -3px 100px 70px #1F1F1F inset;
+}
+
+.AccountInfo {
+	background : #323232;
+	border: 1px solid #5a5a5a;
+	margin-left : auto;
+	margin-right : auto;
+	display : flex;
+	border-radius : 10px;
+	width : 80%;
+	-webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.ListGames {
+	position: fixed;
+	-webkit-box-shadow: 16px 4px 8px 0px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 16px 4px 8px 0px rgba(0, 0, 0, 0.2);
+	box-shadow: 16px 4px 8px 0px rgba(0, 0, 0, 0.2);
+	width : 200px;
+	height : 100%;
+	z-index: 2;
+	background-color : #323232;
+	color : white;
+}
+.MainContent {
+	display : flex;
+	width : 100%;
+	height : 100%;
+	
+	background-color: #1F1F1F;
+	margin-top : 50px;
+}
+.ListGamesElement {
+	display : flex;
+	flex-direction : row;
+	width : 90%;
+	background-color : green;
+	margin-top : 5px;
+	height : 25px;
+	border-radius  : 15px;
+}
+.ListGamesBody {
+	width : 95%;
+	height : 70%;
+	margin-left : auto;
+	margin-top : 15px;
+	display : flex;
+	flex-direction : column
+}
+.item {
+	display: flex;
+	background-color: #7777e9;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	transition: 0.3s ease-out;
+  }
+.SasIcon { 
+	background-image : url('./Entity/SasavnIcon.png')
+}
+.HolyScreen {
+	background-image : url('./Entity/sasavnPresent.jpg')
+}
+
+.Ebat { 
+	src : url('./Entity/test.mp4')
+}
+.GameIcon { 
+	width: 30px;
+	height: 30px;
+	margin-bottom : 15px;
+	border-radius: 50%
+}
+
+
+.WhiteNiggerButton { 
+	background-color : inherit;
+	border-color: red;
+	border-style: solid;
+	margin-bottom : 20px;
+	color: white;
+	width: 130px;
+	height: 50px;
+}
+
+.unselectable {
+	-moz-user-select: none; 
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: none;
+  }

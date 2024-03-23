@@ -1,0 +1,158 @@
+.DefaultVersionStyle {
+	font-size : 20px;
+	font-weight : bold;
+	margin-bottom : 10px;
+}
+
+.added {
+	font-size : 20px;
+	color : green;
+	font-weight : bold;
+	margin-bottom : 10px;
+}
+
+.defaultTitle {
+	margin-bottom : 10px;
+}
+
+.defaultStyle {
+	margin-bottom : 3px;
+	white-space : pre-line;
+	font-weight : normal;
+}
+
+.fixedStyle {
+	font-size : 20px;
+	color : purple;
+	font-weight : bold;
+	margin-bottom : 10px;
+}
+
+.EditorButton {
+	cursor: pointer;
+	transform: translate(-30px);
+	position : sticky;
+	top : 70px;
+	border-radius : 0px 15px 15px 0px;
+	background : purple;
+	height : fit-content;
+	padding-left : 30px;
+	padding : 10px;
+
+	&:hover {
+		background-color: var(--main-color);
+		transform: translate(0px);
+	}
+}
+
+.updateHistory {
+	position : sticky;
+	min-width : 300px;
+	max-width : 700px;
+	width : 350px;
+	height : 100vh;
+	background : #323232;
+	padding : 30px;
+	top : 50px;
+}
+
+
+.ChangeLogsHistoryScroll {
+	scrollbar-color: var(--scrollbar-color) var(--scrollbar-track-color);
+	margin-top : 30px;
+	overflow-y : auto;
+	max-height: 300px;
+	height: fit-content;
+	border-radius : 5px 15px 15px 5px;
+	padding : 0px;
+
+	&::-webkit-scrollbar {
+		height: var(--scrollbar-size);
+		width: var(--scrollbar-size);
+		width: 10px;
+		background-clip: content-box;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: grey;
+		border-radius: 15px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: var(--scrollbar-color);
+		border-radius: 15px;
+		border: solid 5px transparent;
+		background-clip: content-box;
+		border: 2px solid transparent;
+	}
+	&::-webkit-scrollbar-thumb {
+		&:hover {
+			background-color: var(--scrollbar-color-hover);
+		}
+		&:active {
+			background-color: var(--scrollbar-color-active);
+		}
+		&:vertical {
+			min-height: var(--scrollbar-minlength);
+		}
+		&:horizontal {
+			min-width: var(--scrollbar-minlength);
+		}
+	}
+}
+
+.edit-button-menu {
+	position: absolute;
+	left: 20px;
+	z-index : 2;
+	background: #424242;
+	border-radius : 5px;
+	animation: animat .3s ease;
+	display: flex;
+	overflow: hidden;
+	flex-direction: column;
+	> :first-child:hover {
+		
+		background-color: aliceblue;
+		cursor: pointer;
+		>* {
+			color: #018134;
+			cursor: pointer;
+		}
+	}
+	> :last-child:hover {
+		background-color: aliceblue;
+		cursor: pointer;
+		>* {
+			color: red;
+			cursor: pointer;
+		}
+	}
+}
+
+
+.active {
+	animation: show 1s;
+	animation-fill-mode: forwards;
+}
+  
+.inactive {
+	animation: hide 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes show {
+	0% {
+	  transform: scaleX(0);
+	}
+	100% {
+	  transform: scaleX(1);
+	}
+  }
+  
+  @keyframes hide {
+	0% {
+	  transform: scaleX(1);
+	}
+	100% {
+	  transform: scaleX(0);
+	}
+  }
