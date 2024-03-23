@@ -10,15 +10,25 @@
   - переписано с использованием Next.js 14 (Что мало полезно ввиду отсутствия возможности использовать SSR)
   - всем стейтом управляет react-query (вызовы API сервера и бекенда tauri) и немного mobx
   - используется openapi-generator с самописным генератором для создания обёртки над react-query
-  - вместо less используется scss и tailwindcss
+  - вместо less используется scss и большая часть стилей переписана на tailwindcss
   
-### lines of code
- - TypeScripr = 6933
- - CSS = 1061
- - LESS = 435
- - JavaScript = 211
- - SVG = 23
- - EJS = 18
- - Markdown = 11
- - INI = 10
+### Количество строк кода
+#### Этого репозитория
+  - TypeScript = 6933
+  - CSS = 1061
+  - LESS = 435
+  - JavaScript = 211
+  - SVG = 23
+  - EJS = 18
+  - Markdown = 11
+  - INI = 10
  
+#### Текущее
+  - TypeScript = 8144
+  - SCSS = 696
+  - Rust = 451
+  - JavaScript = 113
+  - SVG = 108
+  - TOML = 32
+  - EJS = 6
+  - Markdown = 6
