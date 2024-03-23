@@ -12,9 +12,7 @@
   - используется openapi-generator с самописным генератором для создания обёртки над react-query
   - вместо less используется scss и tailwindcss
   
-
-### Вывод cloc
-#### lines of code
+### lines of code
  - TypeScripr = 6933
  - CSS = 1061
  - JavaScript = 211
