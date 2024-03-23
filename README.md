@@ -15,6 +15,7 @@
 ### lines of code
  - TypeScripr = 6933
  - CSS = 1061
+ - LESS = 435
  - JavaScript = 211
  - SVG = 23
  - EJS = 18
